@@ -4,7 +4,7 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
+import BotIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
@@ -155,11 +155,9 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
+          字节锻造 AI
         </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-sub-title"]}>锻造你自己的AI助手</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -181,9 +179,11 @@ export function SideBar(props: { className?: string }) {
         />
         <IconButton
           icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          text={"官网"}
           className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
+          onClick={() => {
+            window.open("https://byteforge.cn/", "_blank");
+          }}
           shadow
         />
       </div>
@@ -217,8 +217,12 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<GithubIcon />} shadow />
+            <a
+              href={"https://byteforge.cn/archives/chatgpt"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton icon={<BotIcon />} text={"使用教程"} shadow />
             </a>
           </div>
         </div>
