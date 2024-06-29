@@ -43,21 +43,6 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-2DLHQ6K27H"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {
-            // @ts-ignore
-            dataLayer.push(arguments)
-          }
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          gtag('js', new Date());
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          gtag('config', 'G-2DLHQ6K27H');
-        </script>
       </head>
       <body>
         {children}
