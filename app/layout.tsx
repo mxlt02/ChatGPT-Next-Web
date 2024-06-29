@@ -49,7 +49,10 @@ export default function RootLayout({
         ></script>
         <script>
           window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
+          {
+            // @ts-ignore
+            dataLayer.push(arguments)
+          }
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           gtag('js', new Date());
           {/* eslint-disable-next-line react/no-unescaped-entities */}
